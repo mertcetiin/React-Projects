@@ -1,5 +1,5 @@
 import { useToursStore } from '../states/store'
-import Loading from './Loading'
+import DeletePage from './DeletePage'
 
 function ToursPage() {
 
@@ -9,7 +9,7 @@ function ToursPage() {
     return (
         <div>
             <h1>Our Tours</h1>
-            {toursState.length === 0 ? <Loading /> : toursState.map((item) => (
+            {toursState.length === 0 ? <DeletePage /> : toursState.map((item) => (
                 <div key={item.id}>
                     <h3>{item.name}</h3>
                     <h4>{item.price}</h4>
