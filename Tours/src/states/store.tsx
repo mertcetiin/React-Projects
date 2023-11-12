@@ -5,6 +5,7 @@ interface ToursState {
     toursState: ToursType[];
     deleteBtn: (id: number) => void;
     refleshBtn: () => void;
+    readMore: () => void;
 }
 
 export const useToursStore = create<ToursState>((set) => ({
@@ -16,5 +17,7 @@ export const useToursStore = create<ToursState>((set) => ({
 
     refleshBtn: () => set({ toursState: ToursInfo }),
 
+    readMore: () => set((state) => ({
 
+    })),
 }));
