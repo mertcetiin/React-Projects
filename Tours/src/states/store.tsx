@@ -5,11 +5,13 @@ interface ToursState {
     toursState: ToursType[];
     deleteBtn: (id: number) => void;
     refleshBtn: () => void;
-    readMore: () => void;
+    readMore: boolean;
+    handleClickRead: () => void;
 }
 
 export const useToursStore = create<ToursState>((set) => ({
     toursState: ToursInfo,
+    readMore: false,
 
     deleteBtn: (id) => set((state) => ({
         toursState: state.toursState.filter((item) => item.id !== id),
@@ -17,7 +19,5 @@ export const useToursStore = create<ToursState>((set) => ({
 
     refleshBtn: () => set({ toursState: ToursInfo }),
 
-    readMore: () => set((state) => ({
-
-    })),
+    handleClickRead: () => set((state) => ({ readMore: !state.readMore })),
 }));
