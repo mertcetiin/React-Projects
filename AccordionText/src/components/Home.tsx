@@ -1,8 +1,18 @@
-
+import { useInfoStore } from "../states/store"
 
 function Home() {
+
+    const dataStates = useInfoStore((state) => state.dataStates);
+
     return (
-        <div>Home</div>
+        <div>
+            {dataStates.map((item) => (
+                <div key={item.id}>
+                    <h3>{item.title}</h3>
+                    <p>{item.info}</p>
+                </div>
+            ))}
+        </div>
     )
 }
 
