@@ -5,6 +5,7 @@ function App() {
   const infoStates = useInfoStore((state) => state.infoStates);
   const index = useInfoStore((state) => state.index)
   const increase = useInfoStore((state) => state.increase)
+  const decrease = useInfoStore((state) => state.decrease)
 
   return (
     <div>
@@ -12,7 +13,7 @@ function App() {
         <h3>{infoStates[index].name}</h3>
         <h4>{infoStates[index].job}</h4>
         <p>{infoStates[index].info}</p>
-        <button>-</button>
+        <button onClick={decrease}>-</button>
         <button onClick={increase}>+</button>
       </div>
     </div>
