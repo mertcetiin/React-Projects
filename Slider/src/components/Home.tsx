@@ -7,6 +7,7 @@ function Home() {
 
     return (
         <div>
+            <button>-</button>
             {infoState.map((item) => (
                 <div key={item.id}>
                     <h2>{item.name}</h2>
@@ -14,8 +15,9 @@ function Home() {
                     <p>{item.text}</p>
                 </div>
             ))}
+            <button>+</button>
         </div>
     )
 }
 
-export default Home
+export default Home;
