@@ -3,8 +3,15 @@ import { infoStates, statesInfo } from "../data/data";
 
 interface SliderState {
     infoState: statesInfo[];
+    index: number;
+    increase: () => void;
 }
 
 export const useSliderStore = create<SliderState>()((set) => ({
     infoState: infoStates,
+    index: 0,
+
+    increase: () => set((state) => ({
+        index: (state.index + 1) % state.infoState.length,
+    })),
 }))
