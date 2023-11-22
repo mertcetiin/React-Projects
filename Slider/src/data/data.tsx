@@ -11,25 +11,25 @@ export const infoStates: statesInfo[] = ([
         id: 1,
         name: 'PETER SMITH',
         info: 'Product Designer',
-        text: 'lorem ıpsum dolar',
+        text: 'lorem ıpsum dolar (1)',
     },
     {
         id: 1,
         name: 'JHON DOE',
         info: 'Regular Guy',
-        text: 'lorem ıpsum dolar',
+        text: 'lorem ıpsum dolar (2)',
     },
     {
         id: 1,
         name: 'MARIA FERGUSON',
         info: 'Office Manager',
-        text: 'lorem ıpsum dolar',
+        text: 'lorem ıpsum dolar (3)',
     },
     {
         id: 1,
         name: 'SUSAN ANDERSEN',
         info: 'The Boss',
-        text: 'lorem ıpsum dolar',
+        text: 'lorem ıpsum dolar (4)',
     },
 
 ])
