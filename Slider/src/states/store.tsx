@@ -6,6 +6,7 @@ interface SliderState {
     index: number;
     increase: () => void;
     decrease: () => void;
+    loadingIndex: () => void;
 }
 
 export const useSliderStore = create<SliderState>()((set) => ({
@@ -18,4 +19,12 @@ export const useSliderStore = create<SliderState>()((set) => ({
     decrease: () => set((state) => ({
         index: (state.index - 1 + state.infoState.length) % state.infoState.length,
     })),
+
+    loadingIndex: () => {
+        setTimeout(() => {
+            set((state) => ({
+                index: (state.index + 1) % state.infoState.length,
+            }));
+        }, 3000);
+    },
 }))
